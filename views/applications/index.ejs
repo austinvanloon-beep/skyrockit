@@ -1,0 +1,12 @@
+<!-- views/applications/index.ejs -->
+
+<ul>
+  <% applications.forEach((application)=>{ %>
+  <li>
+    <!-- Add a link around each application, directing to the 'show' page -->
+    <a href="/users/<%= user._id %>/applications/<%= application._id %>">
+      <%= application.title %> at <%= application.company %>
+    </a>
+  </li>
+  <% }) %>
+</ul>
