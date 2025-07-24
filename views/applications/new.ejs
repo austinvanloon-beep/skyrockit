@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New App</title>
+  </head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+<select id="status" name="status">
+  <option value="interested">Interested</option>
+  <option value="applied">Applied</option>
+  <option value="interviewing">Interviewing</option>
+  <option value="rejected">Rejected</option>
+  <option value="accepted">Accepted</option>
+</select>
+
+  <h1>Your Apps</h1>
+  <a href="/users/<%=user._id%>/applications/new">Add an App</a>
+</body>
+</html>

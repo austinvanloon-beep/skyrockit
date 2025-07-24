@@ -37,12 +37,11 @@ app.use(passUserToView)
 
 app.get('/', async (req, res) => {
   if (req.session.user) {
-    
-  }
-  res.render('index.ejs', {
-    user: req.session.user,
-  });
-});
+    res.redirect(`/users/${req.session.user._id}/applications`)
+  } else {
+  res.render('index.ejs')
+  };
+})
 
 app.use('/auth', authController);
 app.use(isSignedIn)
